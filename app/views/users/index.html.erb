@@ -1,0 +1,19 @@
+<h1>ユーザー一覧</h1>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">氏名</th>
+      <th scopr="col">年齢</th>
+      <th scope="col">身長</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each.with_index(1) do |user, i| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.age %></td>
+        <td><%= user.height %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
