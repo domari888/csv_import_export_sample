@@ -15,4 +15,13 @@ class User < ApplicationRecord
       # User モデルにバルクインサート(まとめて追加)
     User.insert_all(list)
   end
+
+  def self.generate_csv
+    CSV.generate do |csv|
+      csv << CSV_COLUMNS
+      all.each do |user|
+        csv << CSV_COLUMNS.map{ |col| user.send(col)}
+      end
+    end
+  end
 end

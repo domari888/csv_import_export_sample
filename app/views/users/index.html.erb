@@ -3,6 +3,7 @@
   <%= form.file_field :file, accept: "text/csv" %>
   <%= form.submit "CSVインポート" %>
 <% end %>
+  <%= link_to "CSV エクスポート", users_path(format: :csv)  %>
 <table>
   <thead>
     <tr>
