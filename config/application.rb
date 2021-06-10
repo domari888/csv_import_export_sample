@@ -17,6 +17,10 @@ require "sprockets/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
+
+# CSVクラスを使用できるように設定
+require "csv"
+
 Bundler.require(*Rails.groups)
 
 module CsvImportExportSample

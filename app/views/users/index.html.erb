@@ -1,4 +1,8 @@
 <h1>ユーザー一覧</h1>
+<%= form_with url: import_path do |form| %>
+  <%= form.file_field :file, accept: "text/csv" %>
+  <%= form.submit "CSVインポート" %>
+<% end %>
 <table>
   <thead>
     <tr>
